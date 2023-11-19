@@ -10,6 +10,7 @@ public class App {
     }
 
     void run() {
+        long lastId = 0;
         System.out.println("== 명언 앱 ==");
 
         while (true) {
@@ -20,16 +21,16 @@ public class App {
             if (command.equals("종료")) {
                 break;
 
-            }
-
-            else if(command.equals("등록")){
+            } else if (command.equals("등록")) {
                 System.out.printf("명언: ");
                 String content = this.sc.nextLine().trim();
 
                 System.out.printf("작가: ");
                 String author = this.sc.nextLine();
 
-                System.out.println("1번 명언이 등록되었습니다.");
+                lastId++;
+
+                System.out.printf("%d번 명언이 등록되었습니다.\n", lastId);
             }
 
 
